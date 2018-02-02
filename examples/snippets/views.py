@@ -28,7 +28,7 @@ class SnippetList(APIView):
     """
 
     @view_config(response_serializer=SnippetSerializer)
-    def get(self, request, version, format=None):
+    def get(self, request, version=None, format=None):
         res = self.response_serializer(data=_FAKE_SNIPPETS, many=True)
         res.is_valid(raise_exception=True)
         return Response(res.validated_data)
