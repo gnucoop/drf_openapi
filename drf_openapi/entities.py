@@ -5,8 +5,8 @@ from collections import OrderedDict
 import coreschema
 import uritemplate
 from coreapi import Link, Document, Field
-from coreapi.compat import force_text
 from django.db import models
+from django.utils.encoding import force_text
 from django.utils.functional import Promise
 from pkg_resources import parse_version
 from rest_framework import serializers
